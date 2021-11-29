@@ -17,17 +17,17 @@ GPIO.output(LED, GPIO.LOW)
 # code of protection; if has no problem the block try will keep always on
 try:
 # infinite loop
- while True:
+    while True:
  # Active the transmission of energy by port 17
- GPIO.output(LED, GPIO.HIGH)
+        GPIO.output(LED, GPIO.HIGH)
  # Wait 1 second
- time.sleep(FRESH)
+        time.sleep(FRESH)
  # Cut off the transmission of energy
- GPIO.output(LED, GPIO.LOW)
+        GPIO.output(LED, GPIO.LOW)
  # again, wait 1 second
- time.sleep(FRESH)
+        time.sleep(FRESH)
  # exceptions are anything that interrupt the try block.
  # if a CTRL_C be pressed
 except KeyboardInterrupt:
 # setup the GPIO to default values; finish any transmission of energy
- GPIO.cleanup()
+    GPIO.cleanup()
