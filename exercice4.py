@@ -22,23 +22,26 @@ try:
             button_state1=GPIO.input(27)
             button_state2=GPIO.input(22)
             if button_state == True:
-                GPIO.output(LED, GPIO.HIGH)
-                state = True
-            else:
-                GPIO.output(LED, GPIO.LOW)
-                state = False
+                if (states[0] == True) 
+                    GPIO.output(LED, GPIO.HIGH)
+                    states[0] = True
+                else:
+                    GPIO.output(LED, GPIO.LOW)
+                    states[0] = False
             if button_state == True:
-                GPIO.output(LED2, GPIO.HIGH)
-                state = True
-            else:
-                GPIO.output(LED2, GPIO.LOW)
-                state = False
+                if (states[1] == True)
+                    GPIO.output(LED, GPIO.HIGH)
+                    states[1] = True
+                else:
+                    GPIO.output(LED, GPIO.LOW)
+                    states[1] = False
             if button_state == True:
-                GPIO.output(LED3, GPIO.HIGH)
-                state = True
-            else:
-                GPIO.output(LED3, GPIO.LOW)
-                state = False
+                if (states[2] == True)
+                    GPIO.output(LED, GPIO.HIGH)
+                    states[2] = True
+                else:
+                    GPIO.output(LED, GPIO.LOW)
+                    states[2] = False
             time.sleep(DELAY)
 except KeyboardInterrupt:
     GPIO.cleanup()
